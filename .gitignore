@@ -1,21 +1,21 @@
-# Ignore Python cache files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *.pyo
 
-# Jupyter Notebook checkpoints
+# Jupyter Notebook checkpoint files
 .ipynb_checkpoints/
 
-# Virtual environment folders
+# Virtual environment directories
 env/
 venv/
 
-# VSCode settings (اختیاری اگر با VSCode کار می‌کنی)
+# VSCode settings directory (optional)
 .vscode/
 
-# MacOS system files
+# macOS system files
 .DS_Store
 
-# Data files (اختیاری: اگر فایل‌های داده سنگین داری)
+# Data files (optional: ignore large datasets or sensitive data)
 *.csv
 *.xlsx
