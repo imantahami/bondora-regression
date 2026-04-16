@@ -1,93 +1,26 @@
-# 📈 Bondora P2P Loan Regression
+# 📈 Bondora P2P Loan Strategic Analysis & Regression
 
-This project builds a regression model to analyze and predict loan-related outcomes using the **Bondora P2P loans** dataset. It applies end-to-end machine learning workflows including preprocessing, feature engineering, modeling, and evaluation.
+This project performs a strategic analysis of the **Bondora P2P loans** dataset, focusing on predicting interest rates and identifying risk factors. By applying multiple linear regression and custom feature engineering, the model quantifies how borrower demographics and financial liabilities impact loan pricing.
 
 ## 📂 Dataset
-
 * **Source**: [Kaggle - Bondora P2P Loans](https://www.kaggle.com/datasets/marcobeyer/bondora-p2p-loans)
-* **Description**: The dataset consists of historical loan information from the Bondora lending platform, including borrower income, employment status, loan purpose, and more.
+* **Scope**: Analysis of 400,000+ historical loan records including borrower income, existing liabilities, and credit ratings.
 
-## 🚀 Project Features
+## 🚀 Key Features & Updates (2026)
+* **Strategic Feature Engineering**: 
+  - Created `DebtToIncome` ratio to assess borrower leverage.
+  - Defined `IsRisky` loans based on high debt ratios (>35%) and low employment stability.
+* **Modern Data Pipeline**: Fully compatible with Pandas 2.0+ (Copy-on-Write) and optimized handling of mixed-type categorical data.
+* **Statistical Inference**: Implementation of 95% Confidence Intervals for funding proportions and detailed OLS summaries.
 
-* 📌 Data Cleaning & Preprocessing
-* 🔍 Feature Selection & Engineering
-* 📊 Regression Modeling:
-
-  * Linear Regression
-  * Random Forest Regressor
-* �� Model Evaluation Metrics:
-
-  * MAE (Mean Absolute Error)
-  * MSE (Mean Squared Error)
-  * R² Score
-* 📉 Visualizations:
-
-  * Prediction vs. Actual plots
-  * Residual distribution
+## 📊 Model Performance
+The current Multiple Linear Regression (OLS) model achieves:
+* **R² Score: 0.618** (Explains 61.8% of interest rate variance).
+* **Significant Predictors**: Credit Rating, Refinance Liabilities, and Existing Liabilities were found to be the most critical drivers of interest rate adjustments.
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
-
-Make sure you have Python 3.7+ installed and the following packages:
-
+Install the required dependencies:
 ```bash
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-jupyter
-```
-
-You can install dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Running the Project
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/imantahami/bondora-regression.git
-   cd bondora-regression
-   ```
-
-2. Launch Jupyter Notebook:
-
-   ```bash
-   jupyter notebook
-   ```
-
-3. Open `Untitled-1.ipynb` and run the cells in order.
-
-## 📈 Results & Insights
-
-* Random Forest generally outperformed Linear Regression in predictive accuracy.
-* Certain features such as income, employment status, and loan purpose had significant predictive power.
-* Visual analysis revealed heteroscedasticity in some residuals, prompting potential future improvements.
-
-## 📁 Project Structure
-
-```
-bondora-regression/
-│
-├── data/                   # (Optional) Raw or processed data files
-├── Untitled-1.ipynb        # Main notebook with full analysis
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
-```
-
-## 🧠 Future Improvements
-
-* Try advanced models like XGBoost or LightGBM
-* Hyperparameter tuning with cross-validation
-* Add pipeline and model export for deployment
-
-## 📬 Contact
-
-If you have any questions or suggestions, feel free to reach out:
-
-* GitHub: [@imantahami](https://github.com/imantahami)
+pip install pandas matplotlib seaborn statsmodels scipy numpy
